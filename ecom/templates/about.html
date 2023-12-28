@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block about-content %}
+<h2 class="text-center mt-4">About Us</h2>
+<hr>
+<div class="container text-center">
+<p>Through our efforts, we aim to contribute to a future where the lines between physical and digital realities are blurred, enabling a more intelligent, interconnected, and enriched global community.</p>
+</div>
+<div class="">
+    <div class="row">
+       <div class="col-md-6 pt-4 px-1">
+        <img class="mt-4" height="250px" width="600px" src="{% static 'app1/images/vision.jpeg' %}">
+       </div>
+     <div class="col-md-6">
+       <h2 class=" vision text-center mt-4">Vision</h2>
+       <hr>
+       <div class="container text-center">
+          <p>Our vision at SDLC Corp is to be a global leader at the forefront of Blockchain, Al, AR / VR, and Digital Transformation technology, recognized for our unwavering commitment to innovation, quality, and user-centric design. We envision a world where our solutions foster deeper connections between people, knowledge, and environments.</p>
+       </div>
+     </div>
+   </div>  
+   </div>
+
+   <div class="">
+    <div class="row">
+     <div class="col-md-6">
+       <h2 class=" vision text-center mt-4">Mission</h2>
+       <hr>
+       <div class="container text-center">
+            <p>At SDLC Corp, our mission is to pioneer the convergence of artificial intelligence, augmented reality, and virtual reality technologies to create transformative experiences that redefine how people interact with the world.
+
+            We are dedicated to pushing the boundaries of innovation to empower businesses and individuals with cutting-edge solutions that enhance communication, learning, creativity, and productivity. Through our relentless pursuit of technological excellence, we strive to shape a future where Al, AR / VR, and Blockchain seamlessly integrate into everyday life, enriching human interactions and unlocking new realms of possibilities.</p>
+       </div>
+     </div>
+     <div class="col-md-6 pt-4 px-1">
+        <img class="mt-4" height="250px" width="600px" src="{% static 'app1/images/mision.jpeg' %}">
+     </div>
+   </div>  
+  </div> 
+  <br><br>
+{% endblock about-content %}

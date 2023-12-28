@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block category_view %}
+<div class="container">
+ <h1>Search</h1>
+   <div class="row m-auto" >
+      <div class="col-sm-9">
+        <h5><small>Your search results.......</small></h5>
+        <div class="row">
+            {% for prod in products %}
+            <div class="col text-center p-4 mb-4 hover-shadow">
+                <a href="{% url 'Product_Details' prod.id %}" class="btn">
+                <div>
+                   <img width="250px" height="200px" src="{{prod.product_image.url}}">
+                   <div class="fw-bold">{{prod.title}}</div>
+                   <div class="fw-bold text-danger" aria-hidden="true">Rs. {{prod.discounted_price}}</div>
+                   <div class="fw-light text-decoration-line-through"> {{prod.orginal_price}}</div> 
+                </div>
+              </a>
+            </div>
+           {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock category_view %}

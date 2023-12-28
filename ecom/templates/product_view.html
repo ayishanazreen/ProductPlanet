@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block category_view %}
+<div class="container">
+ <h1>Our Products</h1>
+   <div class="row m-auto" >
+       <div class="list-group col-sm-3 mt-3 p-4"> 
+           {% for x in prod %}
+             <a href="{% url 'category_title' x.title %}" class="list-group-item list-group-item-action" aria-current="true">{{x.title}}</a>
+           {% endfor %}
+        </div> 
+      <div class="col-sm-9">
+        <div class="row">
+            {% for x in prod %}
+            <div class="col text-center p-4 mb-4">
+                <a href="{% url 'Product_Details' x.id %}" class="btn">
+                <div>
+                   <img width="250px" height="200px" src="{{x.product_image.url}}">
+                   <div class="fw-bold">{{x.title}}</div>
+                   <div class="fw-bold text-danger" aria-hidden="true">Rs. {{x.discounted_price}}</div>
+                   <div class="fw-light text-decoration-line-through"> {{x.orginal_price}}</div> 
+                </div>
+              </a>
+            </div>
+           {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock category_view %}
+
+

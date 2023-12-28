@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %} 
+Home Page 
+
+
+{% endblock title %}
+
+{% block carousel-content %}
+        <h1 class="text-center mt-4" style="font-size: 50px; font-style: normal;"> Welcome to Product Planet.... <br>  <br>Explore in the world of IT..</h1>
+        <br><br><br><br>
+        <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="{% static 'app1/banner/b1.jpeg' %}" class="d-block" style="width:100%; height:570px" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'app1/banner/b11.jpeg' %}" class="d-block" style="width:100%; height:570px" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'app1/banner/b3.jpeg' %}" class="d-block" style="width:100%; height:570px" alt="">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+{% endblock carousel-content %}
+
+
+{% block about-content %}
+    <div class="container h-20">
+    <section class="row bg-success m-3 p-5 text-white text-center">
+        <h1>Our Products</h1>
+        <hr>
+        <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
+    </div>
+    </section>
+{% endblock about-content %}
+
+
+{% block product-content %}
+<h1 class="m-4">IT PRODUCTS</h1>
+<div class="container">
+    <div class="row">
+        <div class="card mb-4" style="max-width:540px; max-height: 250px;">
+          <div class="row g-0">
+              <div class="col-md-3">
+                <a href="{% url 'categoryView' 'LN' %}" class="text-decoration-none ">
+                 <img src="{% static 'app1/images/products/p1.jpeg' %}" class="img-fluid rounded-start mt-3" alt=" ">
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title d-flex text-dark">LAN Cable</h5>
+                  <p class="card-text align-items-center d-flex justify-content-center text-dark">The quality material used in It's construction makes it durable
+                    Compact construction
+                    Best-in class
+                    Designed to perfection</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+          <div class="card mb-4 mx-2" style="max-width: 540px; max-height: 250px;">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <a href="{% url 'categoryView' 'TB' %}" class="text-decoration-none ">
+                <img src="{% static 'app1/images/products/p2.jpeg' %}" class="img-fluid rounded-start mt-3" alt="...">
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title text-dark">Tablet</h5>
+                  <p class="card-text text-dark">Apple 2022 10.9-inch iPad (Wi-Fi, 64GB) - Pink (10th generation)</p>
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+
+          <div class="card mb-4" style="max-width:540px; max-height: 250px;">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <a href="{% url 'categoryView' 'KB' %}" class="text-decoration-none ">
+                <img src="{% static 'app1/images/products/p3.jpeg' %}" class="img-fluid rounded-start mt-3" alt="..." style="max-width: 200px; max-height: 80px;">
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title text-dark">Keyboard</h5>
+                  <p class="card-text text-dark">Logitech MX Keys Mini Minimalist Wireless Illuminated Keyboard, Compact, Bluetooth, Backlit, USB-C, Compatible with Apple macOS, iOS, Windows, Linux, Android, Metal Build.</p>
+                </div>
+              </div>
+              </a>
+             </div>
+            </div>
+            
+            <div class="card mb-4 mx-2" style="max-width: 540px; max-height: 250px;">
+                <div class="row">
+                  <div class="col-md-3">
+                   <a href="{% url 'categoryView' 'MS' %}" class="text-decoration-none ">
+                    <img src="{% static 'app1/images/products/p4.jpeg' %}" class="img-fluid rounded-start mt-3" alt="...">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">Lenovo Essential Compact Wireless Mouse</h5>
+                      <p class="card-text text-dark">Compact and portable design
+                        Optical sensor with 1000 DPI resolution
+                        1 AA battery for up 12 months use (may vary based on usage).</p>
+                    </div>
+                  </div>
+                </a>
+               </div>
+            </div>
+              
+              <div class="card mb-4" style="max-width:540px; max-height: 250px;">
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <a href="{% url 'categoryView' 'LP' %}" class="text-decoration-none ">
+                    <img src="{% static 'app1/images/products/p5.jpeg' %}" class="img-fluid rounded-start mt-3" alt="...">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">HP Laptop</h5>
+                      <p class="card-text text-dark">HP Laptop 15s-fq2052ne, 15.6" HD, 11th Gen Intel® Core™ i3, 4GB RAM, 256GB SSD, Intel® UHD Graphics, Windows 11 Home, En -Ar KB, Natural silver - [8L045EA]</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+             </div>
+
+
+             <div class="card mb-4 mx-2" style="max-width: 540px; max-height: 250px;">
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <a href="{% url 'categoryView' 'LN' %}" class="text-decoration-none ">
+                    <img src="{% static 'app1/images/products/p6.jpeg' %}" class="img-fluid img-responsive rounded-start mt-3 h-5" alt="...">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">Phone Case</h5>
+                      <p class="card-text text-dark">Apple iPhone 15 Pro Max Silicone Case with MagSafe - Black </p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+             </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock product-content %}

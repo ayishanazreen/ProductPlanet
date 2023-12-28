@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block category_view %}
+<div class="container">
+ <h4 class="mt-5">Your Wishlisted Items.....</h4>
+      <div class="col-sm-9">
+        <div class="row">
+            {% for x in wish %}
+            <div class=" col-sm-4 text-center p-4 mb-4">
+                <a href="{% url 'Product_Details' x.id %}" class="btn">
+                <div>
+                   <img width="250px" height="200px" src="{{x.products.product_image.url}}">
+                   <div class="fw-bold">{{x.products.title}}</div>
+                   <div class="fw-bold text-danger" aria-hidden="true">Rs. {{x.products.discounted_price}}</div>
+                   <div class="fw-light text-decoration-line-through"> {{x.products.orginal_price}}</div> 
+                </div>
+              </a>
+            </div>
+           {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock category_view %}
+
+
